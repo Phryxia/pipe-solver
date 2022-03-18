@@ -227,6 +227,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/lodash@npm:^4.14.180":
+  version: 4.14.180
+  resolution: "@types/lodash@npm:4.14.180"
+  checksum: fc42ae3473695cac6e91553f832fef8eb51a31c1c0381cafa81b00dc3efe18e279786bdda77caf0b90a8340ba2ba7aa46ae6541d69870565f775d04c89128bc1
+  languageName: node
+  linkType: hard
+
 "@types/mime@npm:^1":
   version: 1.3.2
   resolution: "@types/mime@npm:1.3.2"
@@ -3469,6 +3476,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "pipe-solver@workspace:."
   dependencies:
+    "@types/lodash": ^4.14.180
     "@types/react": ^17.0.34
     "@types/react-dom": ^17.0.11
     autoprefixer: ^10.4.0
@@ -3476,6 +3484,7 @@ __metadata:
     css-loader: ^6.5.1
     esbuild-loader: ^2.18.0
     html-webpack-plugin: ^5.5.0
+    lodash: ^4.17.21
     postcss: ^8.3.11
     postcss-loader: ^6.2.0
     postcss-nested: ^5.0.6
