@@ -1,0 +1,37 @@
+.game {
+  width: min-content;
+  height: min-content;
+  display: flex;
+  flex-direction: column;
+}
+
+.pipe-row {
+  display: flex;
+}
+
+.pipe {
+  width: 40px;
+  height: 40px;
+  background: #eeeeee;
+  border: 1px solid #ffffff;
+
+  &:hover {
+    background: #ffffff;
+  }
+
+  &.down {
+    transform: rotate(0deg);
+  }
+
+  &.left {
+    transform: rotate(90deg);
+  }
+
+  &.up {
+    transform: rotate(180deg);
+  }
+
+  &.right {
+    transform: rotate(270deg);
+  }
+}

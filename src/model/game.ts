@@ -1,8 +1,8 @@
 export const enum Rotation {
-  DOWN,
-  LEFT,
-  UP,
-  RIGHT,
+  DOWN = 'down',
+  LEFT = 'left',
+  UP = 'up',
+  RIGHT = 'right',
 }
 
 export const enum PipeType {
@@ -22,9 +22,10 @@ export interface Pipe {
 export interface GameMeta {
   width: number
   height: number
+  isWrapped: boolean
 }
 
 export interface GameState {
   meta: GameMeta
-  pipes: Pipe[]
+  pipes: Pipe[][]
 }
