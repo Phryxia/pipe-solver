@@ -11,11 +11,8 @@ interface PipeProps {
 
 export default function Pipe({ pipe, onClick }: PipeProps) {
   return (
-    <button
-      className={cx('pipe', pipe.rotation)}
-      onClick={() => onClick(pipe.x, pipe.y)}
-    >
-      A
+    <button className={cx('pipe')} onClick={() => onClick(pipe.x, pipe.y)}>
+      <div className={cx('pipe-inner', pipe.type, `r${pipe.rotation}`)} />
     </button>
   )
 }

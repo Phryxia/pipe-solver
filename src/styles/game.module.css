@@ -14,24 +14,111 @@
   height: 40px;
   background: #eeeeee;
   border: 1px solid #ffffff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 
   &:hover {
     background: #ffffff;
   }
 
-  &.down {
-    transform: rotate(0deg);
-  }
+  .pipe-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.1s;
+    position: relative;
 
-  &.left {
-    transform: rotate(90deg);
-  }
+    &.I_SHAPE {
+      &::after {
+        position: absolute;
+        width: 20%;
+        height: 100%;
+        transform: translate(-50%, 0);
+        background: black;
+        content: '';
+      }
+    }
 
-  &.up {
-    transform: rotate(180deg);
-  }
+    &.T_SHAPE {
+      &::after {
+        position: absolute;
+        width: 100%;
+        height: 20%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: black;
+        content: '';
+      }
 
-  &.right {
-    transform: rotate(270deg);
+      &::before {
+        position: absolute;
+        width: 20%;
+        height: 50%;
+        transform: translate(-50%, 100%);
+        background: black;
+        content: '';
+      }
+    }
+
+    &.L_SHAPE {
+      &::after {
+        position: absolute;
+        width: 60%;
+        height: 20%;
+        right: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+        background: black;
+        content: '';
+      }
+
+      &::before {
+        position: absolute;
+        width: 20%;
+        height: 50%;
+        transform: translate(-50%, 100%);
+        background: black;
+        content: '';
+      }
+    }
+
+    &.LEAF {
+      &::after {
+        position: absolute;
+        width: 20%;
+        height: 50%;
+        transform: translate(-50%, 100%);
+        background: black;
+        content: '';
+      }
+
+      &::before {
+        position: absolute;
+        width: 35%;
+        height: 35%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background: black;
+        border-radius: 100%;
+        content: '';
+      }
+    }
+
+    &.r0 {
+      transform: rotate(0deg);
+    }
+
+    &.r1 {
+      transform: rotate(90deg);
+    }
+
+    &.r2 {
+      transform: rotate(180deg);
+    }
+
+    &.r3 {
+      transform: rotate(270deg);
+    }
   }
 }

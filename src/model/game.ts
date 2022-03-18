@@ -1,8 +1,12 @@
 export const enum Rotation {
-  DOWN = 'down',
-  LEFT = 'left',
-  UP = 'up',
-  RIGHT = 'right',
+  DOWN = 0,
+  LEFT = 1,
+  UP = 2,
+  RIGHT = 3,
+}
+
+export function rotate(rotation: Rotation, amount: number): Rotation {
+  return (rotation + 4 + (amount % 4)) % 4
 }
 
 export const enum PipeType {
